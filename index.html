@@ -14,19 +14,19 @@
             padding: 0;
         }
 
-        header {
+        .header {
             background-color: #2c2c2c;
             padding: 1rem;
             text-align: center;
         }
 
-        h1 {
+        .header__title {
             color: #ff0000;
             font-size: 2.5rem;
             margin-bottom: 1rem;
         }
 
-        nav {
+        .nav {
             background-color: #2c2c2c;
             position: sticky;
             top: 0;
@@ -35,75 +35,81 @@
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         }
 
-        nav ul {
+        .nav__list {
             list-style-type: none;
             padding: 0;
             margin: 0;
         }
 
-        nav ul li {
+        .nav__item {
             display: inline;
             margin: 0 10px;
         }
 
-        nav ul li a {
+        .nav__link {
             color: #f8f8f8;
             text-decoration: none;
             font-weight: bold;
             transition: color 0.3s ease;
         }
 
-        nav ul li a:hover {
+        .nav__link:hover {
             color: #ff0000;
         }
 
-        main {
+        .main {
             max-width: 800px;
             margin: 0 auto;
             padding: 2rem;
         }
 
-        section {
+        .main__section {
             margin-bottom: 2rem;
         }
 
-        h2 {
+        .main__section-title {
             color: #ff0000;
             border-bottom: 2px solid #ff0000;
             padding-bottom: 0.5rem;
         }
 
-        img {
+        .gallery__image {
             max-width: 100%;
             height: auto;
             border: 2px solid #ff0000;
         }
 
-        table {
+        .discography__table {
             width: 100%;
             border-collapse: collapse;
             margin-top: 1rem;
         }
 
-        th, td {
+        .discography__row {
+            border: 1px solid #ff0000;
+        }
+
+        .discography__header {
+            background-color: #2c2c2c;
+            color: #ff0000;
+            padding: 0.5rem;
+            text-align: left;
+        }
+
+        .discography__cell {
             border: 1px solid #ff0000;
             padding: 0.5rem;
             text-align: left;
         }
 
-        th {
-            background-color: #2c2c2c;
-            color: #ff0000;
-        }
-
-        form label {
+        .form__label {
             display: block;
             margin-bottom: 0.5rem;
         }
 
-        form input[type="text"],
-        form input[type="email"],
-        form textarea {
+        .form__input-text,
+        .form__input-email,
+        .form__textarea {
             width: 100%;
             padding: 0.5rem;
             margin-bottom: 1rem;
@@ -112,7 +118,7 @@
             color: #f8f8f8;
         }
 
-        form input[type="submit"] {
+        .form__input-submit {
             background-color: #ff0000;
             color: #f8f8f8;
             border: none;
@@ -121,11 +127,11 @@
             transition: background-color 0.3s ease;
         }
 
-        form input[type="submit"]:hover {
+        .form__input-submit:hover {
             background-color: #cc0000;
         }
 
-        footer {
+        .footer {
             background-color: #2c2c2c;
             color: #f8f8f8;
             text-align: center;
@@ -140,7 +146,7 @@
             margin-bottom: 1rem;
         }
 
-        .video-container iframe {
+        .video-container__iframe {
             position: absolute;
             top: 0;
             left: 0;
@@ -151,115 +157,109 @@
     </style>
 </head>
 <body>
-    <header>
-        <h1>Welcome to My Chemical Romance</h1>
+    <header class="header" id="header">
+        <h1 class="header__title">Welcome to My Chemical Romance</h1>
     </header>
     
-    <nav>
-        <ul>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#gallery">Gallery</a></li>
-            <li><a href="#discography">Discography</a></li>
-            <li><a href="#songs">Top Songs</a></li>
-            <li><a href="#video">Videos</a></li>
-            <li><a href="#contact">Contact</a></li>
+    <nav class="nav" id="nav">
+        <ul class="nav__list">
+            <li class="nav__item"><a class="nav__link" href="#about">About Us</a></li>
+            <li class="nav__item"><a class="nav__link" href="#gallery">Gallery</a></li>
+            <li class="nav__item"><a class="nav__link" href="#discography">Discography</a></li>
+            <li class="nav__item"><a class="nav__link" href="#songs">Top Songs</a></li>
+            <li class="nav__item"><a class="nav__link" href="#video">Videos</a></li>
+            <li class="nav__item"><a class="nav__link" href="#contact">Contact</a></li>
         </ul>
     </nav>
 
-    <main>
-        <section id="about">
-            <h2>About My Chemical Romance</h2>
-            <p>My Chemical Romance is an American rock band that formed in 2001. Known for their emotional intensity and gothic aesthetic, they have left an indelible mark on the world of alternative rock.</p>
+    <main class="main" id="main">
+        <section id="about" class="main__section">
+            <h2 class="main__section-title">About My Chemical Romance</h2>
+            <p class="main__section-text">My Chemical Romance is an American rock band that formed in 2001. Known for their emotional intensity and gothic aesthetic, they have left an indelible mark on the world of alternative rock.</p>
         </section>
 
-        <section id="gallery">
-            <h2>Band Gallery</h2>
-            <img src="2.jfif" alt="My Chemical Romance Band Photo">
-            <p>Check out some of our memorable moments below:</p>
-            <ul>
-                <li>Live at the Black Parade Tour</li>
-                <li>Performing at Reading Festival 2011</li>
-                <li>Behind the scenes at the recording studio</li>
+        <section id="gallery" class="main__section">
+            <h2 class="main__section-title">Band Gallery</h2>
+            <img class="gallery__image" src="2.jfif" alt="My Chemical Romance Band Photo">
+            <p class="main__section-text">Check out some of our memorable moments below:</p>
+            <ul class="gallery__list">
+                <li class="gallery__item">Live at the Black Parade Tour</li>
+                <li class="gallery__item">Performing at Reading Festival 2011</li>
+                <li class="gallery__item">Behind the scenes at the recording studio</li>
             </ul>
         </section>
 
-        <section id="discography">
-            <h2>Discography</h2>
-            <table>
-                <tr>
-                    <th>Album</th>
-                    <th>Release Year</th>
-                    <th>Genre</th>
+        <section id="discography" class="main__section">
+            <h2 class="main__section-title">Discography</h2>
+            <table class="discography__table">
+                <tr class="discography__row">
+                    <th class="discography__header">Album</th>
+                    <th class="discography__header">Release Year</th>
+                    <th class="discography__header">Genre</th>
                 </tr>
-                <tr>
-                    <td>I Brought You My Bullets, You Brought Me Your Love</td>
-                    <td>2002</td>
-                    <td>Alternative Rock</td>
+                <tr class="discography__row">
+                    <td class="discography__cell">I Brought You My Bullets, You Brought Me Your Love</td>
+                    <td class="discography__cell">2002</td>
+                    <td class="discography__cell">Alternative Rock</td>
                 </tr>
-                <tr>
-                    <td>Three Cheers for Sweet Revenge</td>
-                    <td>2004</td>
-                    <td>Emo, Punk Rock</td>
+                <tr class="discography__row">
+                    <td class="discography__cell">Three Cheers for Sweet Revenge</td>
+                    <td class="discography__cell">2004</td>
+                    <td class="discography__cell">Emo, Punk Rock</td>
                 </tr>
-                <tr>
-                    <td>The Black Parade</td>
-                    <td>2006</td>
-                    <td>Alternative Rock, Emo</td>
+                <tr class="discography__row">
+                    <td class="discography__cell">The Black Parade</td>
+                    <td class="discography__cell">2006</td>
+                    <td class="discography__cell">Alternative Rock, Emo</td>
                 </tr>
-                <tr>
-                    <td>Danger Days: The True Lives of the Fabulous Killjoys</td>
-                    <td>2010</td>
-                    <td>Alternative Rock, Pop Punk</td>
+                <tr class="discography__row">
+                    <td class="discography__cell">Danger Days: The True Lives of the Fabulous Killjoys</td>
+                    <td class="discography__cell">2010</td>
+                    <td class="discography__cell">Alternative Rock, Pop Punk</td>
                 </tr>
             </table>
         </section>
 
-        <section id="songs">
-            <h2>Top Songs</h2>
-            <ul>
-                <li>Welcome to the Black Parade</li>
-                <li>Helena</li>
-                <li>I'm Not Okay (I Promise)</li>
-                <li>The Ghost of You</li>
-                <li>Na Na Na (Na Na Na Na Na Na Na Na Na)</li>
+        <section id="songs" class="main__section">
+            <h2 class="main__section-title">Top Songs</h2>
+            <ul class="songs__list">
+                <li class="songs__item">Welcome to the Black Parade</li>
+                <li class="songs__item">Helena</li>
+                <li class="songs__item">I'm Not Okay (I Promise)</li>
+                <li class="songs__item">The Ghost of You</li>
+                <li class="songs__item">Na Na Na (Na Na Na Na Na Na Na Na Na)</li>
             </ul>
         </section>
 
-        <section id="video">
-            <h2>Watch Our Latest Performances</h2>
+        <section id="video" class="main__section">
+            <h2 class="main__section-title">Watch Our Latest Performances</h2>
             <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/RRKJiM9Njr8?si=e6nQ-e7LEKT7l8Vh" title="Welcome to the Black Parade" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe class="video-container__iframe" src="https://www.youtube.com/embed/RRKJiM9Njr8?si=e6nQ-e7LEKT7l8Vh" title="Welcome to the Black Parade" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
             <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/UCCyoocDxBA?si=Z3I2IYddEA7GyqWz" title="Helena" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/dhZTNgAs4Fc?si=aH5LTIluXh0ieaAd" title="I'm Not Okay (I Promise)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/uCUpvTMis-Y?si=6_RUe7JxW2_AMWi0" title="The Ghost of You" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/egG7fiE89IU?si=_rAVPq9qDsHXvJ0p" title="Na Na Na (Na Na Na Na Na Na Na Na Na)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe class="video-container__iframe" src="https://www.youtube.com/embed/yyT-3wnrGuU" title="Helena" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         </section>
 
-        <section id="contact">
-            <h2>Contact Us</h2>
-            <form>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="4"></textarea>
-                <input type="submit" value="Send Message">
+        <section id="contact" class="main__section">
+            <h2 class="main__section-title">Contact Us</h2>
+            <form class="form" action="#" method="post">
+                <label class="form__label" for="name">Name:</label>
+                <input class="form__input-text" type="text" id="name" name="name" required>
+                
+                <label class="form__label" for="email">Email:</label>
+                <input class="form__input-email" type="email" id="email" name="email" required>
+                
+                <label class="form__label" for="message">Message:</label>
+                <textarea class="form__textarea" id="message" name="message" rows="4" required></textarea>
+                
+                <input class="form__input-submit" type="submit" value="Send Message">
             </form>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2024 My Chemical Romance. All Rights Reserved.</p>
+    <footer class="footer" id="footer">
+        <p>© 2024 My Chemical Romance Fan Page. All rights reserved.</p>
     </footer>
 </body>
 </html>
